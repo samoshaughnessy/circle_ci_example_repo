@@ -13,7 +13,7 @@ export default function App2() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Landing hello="Hello World" />}>
+          <Route path="/" element={<Landing />}>
             <Route path="form" element={<Form />} />
             <Route path="login" element={<Login />} />
           </Route>

@@ -41,7 +41,6 @@ class Landing extends React.Component {
     return (
       <div className="App">
         <header>
-          <p>{this.props.hello}</p>
           <Outlet />
           <img src={logo} className="App-logo" alt="logo" />
           <ol>{messageListItems}</ol>
