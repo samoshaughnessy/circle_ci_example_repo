@@ -43,6 +43,7 @@ class Landing extends React.Component {
         <header>
           <Outlet />
           <img src={logo} className="App-logo" alt="logo" />
+          <h1>Added with CircleCi</h1>
           <ol>{messageListItems}</ol>
         </header>
       </div>
