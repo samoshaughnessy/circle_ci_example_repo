@@ -21,13 +21,22 @@ export default function Navbar() {
 
   return (
     <div className="Nav">
-      {isLoggedIn ? email : "Not logged in yet "}
-      <Link to="/">Landing</Link>
-      {isLoggedIn ? null : <Link to="/login">Login</Link>}
+      <p className="NavItem">{isLoggedIn ? email : "Not logged in yet "}</p>
+      <Link className="NavItem" to="/">
+        Landing
+      </Link>
+      {isLoggedIn ? null : (
+        <Link className="NavItem" to="/login">
+          Login
+        </Link>
+      )}
       {isLoggedIn ? (
         <div>
-          <Link to="/form">Form</Link>
+          <Link className="NavItem" to="/form">
+            Form
+          </Link>
           <button
+            className="NavItem"
             onClick={() => {
               signOut(auth).then(() => {
                 setIsLoggedIn(false);

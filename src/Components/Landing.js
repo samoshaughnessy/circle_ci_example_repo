@@ -28,12 +28,14 @@ class Landing extends React.Component {
   render() {
     let messageListItems = this.state.messages.map((message) => (
       <li key={message.key}>
-        {message.val.message} - {message.val.date}
-        {message.val.url ? (
-          <img src={message.val.url} alt={message.val.url} />
-        ) : (
-          "No url"
-        )}
+        <div className="Column">
+          {message.val.message} - {message.val.date}
+          {message.val.url ? (
+            <img src={message.val.url} alt={message.val.url} />
+          ) : (
+            "No url"
+          )}{" "}
+        </div>
       </li>
     ));
     return (
